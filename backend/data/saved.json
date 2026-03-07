@@ -1,0 +1,100 @@
+[
+  {
+    "_id": "pyqqn8tgy3mmfx98bk",
+    "user_id": "demo-user",
+    "property_id": {
+      "name": "La Fortuna Treehouse",
+      "location": "Costa Rica",
+      "address": "La Fortuna, San Carlos, Alajuela, Costa Rica",
+      "lat": 10.468,
+      "lng": -84.6435,
+      "price": 130,
+      "type": "treehouse",
+      "description": "Magical treehouse with direct views of Arenal Volcano. Geothermal hot springs on-site, jungle wildlife at your doorstep.",
+      "images": [
+        "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=800",
+        "https://images.unsplash.com/photo-1518684079-3c830dcef090?w=800"
+      ],
+      "amenities": [
+        "Volcano Views",
+        "Geothermal Hot Springs",
+        "Zip Lining",
+        "Night Wildlife Tours",
+        "Hammock Terraces"
+      ],
+      "sustainability_features": [
+        "Geothermal Energy",
+        "Rainforest Restoration",
+        "Local Artisan Products",
+        "Carbon Offset Program"
+      ],
+      "certifications": [
+        "Rainforest Alliance",
+        "CST 4-Leaf"
+      ],
+      "eco_breakdown": {
+        "renewable_energy": 18,
+        "water_conservation": 17,
+        "waste_management": 16,
+        "sustainable_materials": 17,
+        "community_impact": 17,
+        "carbon_reduction": 18
+      },
+      "rating": 4.8,
+      "reviews_count": 271,
+      "_id": "4lxfllzb5njmmfx5poy",
+      "eco_score": 100,
+      "createdAt": "2026-03-07T06:05:08.050Z"
+    },
+    "createdAt": "2026-03-07T06:07:52.160Z"
+  },
+  {
+    "_id": "gkmtxwdwczmmfx96z4",
+    "user_id": "demo-user",
+    "property_id": {
+      "name": "Backwater Treehouse",
+      "location": "Kerala",
+      "address": "Alleppey Backwaters, Kerala, India",
+      "lat": 9.4981,
+      "lng": 76.3388,
+      "price": 150,
+      "type": "treehouse",
+      "description": "A stunning treehouse perched above Kerala backwaters. Run entirely on renewable energy with traditional Kerala architecture.",
+      "images": [
+        "https://images.unsplash.com/photo-1542718610-a1d656d1884c?w=800",
+        "https://images.unsplash.com/photo-1609766857842-01c80e5a6606?w=800"
+      ],
+      "amenities": [
+        "Private Deck",
+        "Canoe Included",
+        "Ayurveda Spa",
+        "Organic Cuisine",
+        "Birdwatching"
+      ],
+      "sustainability_features": [
+        "100% Renewable Energy",
+        "Greywater Recycling",
+        "Traditional Materials",
+        "Mangrove Restoration"
+      ],
+      "certifications": [
+        "Green Key",
+        "Responsible Tourism Kerala"
+      ],
+      "eco_breakdown": {
+        "renewable_energy": 20,
+        "water_conservation": 19,
+        "waste_management": 17,
+        "sustainable_materials": 20,
+        "community_impact": 17,
+        "carbon_reduction": 20
+      },
+      "rating": 5,
+      "reviews_count": 314,
+      "_id": "koyyx2xd1ynmmfx5poy",
+      "eco_score": 100,
+      "createdAt": "2026-03-07T06:05:08.050Z"
+    },
+    "createdAt": "2026-03-07T06:07:50.416Z"
+  }
+]

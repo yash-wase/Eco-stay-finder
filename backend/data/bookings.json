@@ -1,0 +1,133 @@
+[
+  {
+    "_id": "iq0ng3qsyiammg20x8t",
+    "user_id": "demo-user",
+    "property_id": {
+      "_id": "ir09fvia97mmg201l0",
+      "name": "the ravi palace",
+      "location": "goa",
+      "images": [
+        "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800"
+      ],
+      "price": 1000,
+      "eco_score": 60
+    },
+    "check_in": "2026-03-08",
+    "check_out": "2026-03-09",
+    "guests": 1,
+    "message": "",
+    "total_price": 1000,
+    "status": "confirmed",
+    "createdAt": "2026-03-07T08:21:22.637Z",
+    "updatedAt": "2026-03-07T08:43:17.381Z"
+  },
+  {
+    "_id": "2tt3ae6l8uhmmg1x9m9",
+    "user_id": "demo-user",
+    "property_id": {
+      "_id": "kiajd0jpaummmfy6f9z",
+      "name": "The Bamboo Nest",
+      "location": "Goa",
+      "images": [
+        "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800",
+        "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800"
+      ],
+      "price": 7099,
+      "eco_score": 100
+    },
+    "check_in": "2026-03-08",
+    "check_out": "2026-03-11",
+    "guests": 2,
+    "message": "",
+    "total_price": 21297,
+    "status": "pending",
+    "createdAt": "2026-03-07T08:18:32.049Z"
+  },
+  {
+    "_id": "911fxfp8re9mmg09tf1",
+    "user_id": "demo-user",
+    "property_id": {
+      "_id": "1bw2z8cqevummg08l28",
+      "name": "the yash palace",
+      "location": "goa",
+      "images": [
+        "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800"
+      ],
+      "price": 2000,
+      "eco_score": 56
+    },
+    "check_in": "2026-03-07",
+    "check_out": "2026-03-09",
+    "guests": 2,
+    "message": "",
+    "total_price": 4000,
+    "status": "pending",
+    "createdAt": "2026-03-07T07:32:18.349Z"
+  },
+  {
+    "_id": "9iat8nw6ojmmg0061p",
+    "user_id": "demo-user",
+    "property_id": {
+      "_id": "l02zejezn2emmfzz0ef",
+      "name": "the yash palace",
+      "location": "goa",
+      "images": [
+        "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800"
+      ],
+      "price": 2000,
+      "eco_score": 60
+    },
+    "check_in": "2026-03-07",
+    "check_out": "2026-03-08",
+    "guests": 2,
+    "message": "",
+    "total_price": 2000,
+    "status": "pending",
+    "createdAt": "2026-03-07T07:24:48.157Z"
+  },
+  {
+    "_id": "fqle4tj3srlmmfxikjs",
+    "user_id": "demo-user",
+    "property_id": {
+      "_id": "yputfnamatmmfx5poy",
+      "name": "Munnar Forest Lodge",
+      "location": "Kerala",
+      "images": [
+        "https://images.unsplash.com/photo-1540541338287-41700207dee6?w=800",
+        "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=800"
+      ],
+      "price": 95,
+      "eco_score": 99
+    },
+    "check_in": "2026-03-07",
+    "check_out": "2026-03-08",
+    "guests": 1,
+    "message": "",
+    "total_price": 95,
+    "status": "confirmed",
+    "createdAt": "2026-03-07T06:15:07.912Z",
+    "updatedAt": "2026-03-07T07:08:42.361Z"
+  },
+  {
+    "_id": "ag3ru0of4vhmmfx8qjm",
+    "user_id": "demo-user",
+    "property_id": {
+      "_id": "koyyx2xd1ynmmfx5poy",
+      "name": "Backwater Treehouse",
+      "location": "Kerala",
+      "images": [
+        "https://images.unsplash.com/photo-1542718610-a1d656d1884c?w=800",
+        "https://images.unsplash.com/photo-1609766857842-01c80e5a6606?w=800"
+      ],
+      "price": 150,
+      "eco_score": 100
+    },
+    "check_in": "2026-03-14",
+    "check_out": "2026-03-16",
+    "guests": 4,
+    "message": "",
+    "total_price": 300,
+    "status": "pending",
+    "createdAt": "2026-03-07T06:07:29.122Z"
+  }
+]

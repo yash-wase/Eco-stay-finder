@@ -1,0 +1,376 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+@theme {
+  --color-eco-50: #f0faf4;
+  --color-eco-100: #dcf5e6;
+  --color-eco-200: #bbead0;
+  --color-eco-300: #8dd9b3;
+  --color-eco-400: #5bbf8d;
+  --color-eco-500: #2D6A4F;
+  --color-eco-600: #256043;
+  --color-eco-700: #1e5038;
+  --color-eco-800: #18402d;
+  --color-eco-900: #123324;
+
+  --color-mint-400: #74C69D;
+  --color-mint-500: #52b788;
+  --color-mint-600: #40916c;
+
+  --color-earth-400: #d4a574;
+  --color-earth-500: #B7894A;
+  --color-earth-600: #9a7040;
+
+  --color-bg: #F8FAF7;
+
+  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-bg);
+  color: #1a2e22;
+  margin: 0;
+}
+
+/* ── Keyframe Animations ───────────────────────────────────────────────── */
+
+/* Gentle float up-down */
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+/* Fade + slide up on page load */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Soft pulse glow on borders */
+@keyframes borderGlow {
+
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(45, 106, 79, 0.0);
+  }
+
+  50% {
+    box-shadow: 0 0 0 4px rgba(45, 106, 79, 0.12);
+  }
+}
+
+/* Shimmer sweep (loading skeletons or badges) */
+@keyframes shimmer {
+  0% {
+    background-position: -200% center;
+  }
+
+  100% {
+    background-position: 200% center;
+  }
+}
+
+/* Marquee scroll */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Gradient pan */
+@keyframes gradientPan {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Scroll reveal — elements start hidden, JS adds .visible */
+@keyframes revealUp {
+  from {
+    opacity: 0;
+    transform: translateY(32px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes revealLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-32px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes revealRight {
+  from {
+    opacity: 0;
+    transform: translateX(32px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.88);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ── Scroll Reveal Utility ─────────────────────────────────────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: none;
+}
+
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-32px);
+  transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1), transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(32px);
+  transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1), transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-scale {
+  opacity: 0;
+  transform: scale(0.88);
+  transition: opacity 0.6s ease, transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.reveal-left.visible,
+.reveal-right.visible,
+.reveal-scale.visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Stagger delays for child cards */
+.stagger>*:nth-child(1) {
+  transition-delay: 0s;
+}
+
+.stagger>*:nth-child(2) {
+  transition-delay: 0.08s;
+}
+
+.stagger>*:nth-child(3) {
+  transition-delay: 0.16s;
+}
+
+.stagger>*:nth-child(4) {
+  transition-delay: 0.24s;
+}
+
+.stagger>*:nth-child(5) {
+  transition-delay: 0.32s;
+}
+
+.stagger>*:nth-child(6) {
+  transition-delay: 0.40s;
+}
+
+/* ── Marquee ──────────────────────────────────────────────────────────── */
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 22s linear infinite;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+/* ── Animated gradient background ─────────────────────────────────────── */
+.gradient-animate {
+  background-size: 200% 200%;
+  animation: gradientPan 6s ease infinite;
+}
+
+
+/* ── Utility Classes ───────────────────────────────────────────────────── */
+
+/* Float animation — apply to hero decorations, logo etc. */
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+.animate-float-slow {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-float-delay {
+  animation: float 5s ease-in-out 1s infinite;
+}
+
+/* Fade-in-up entrance */
+.animate-fade-up {
+  animation: fadeInUp 0.5s ease both;
+}
+
+.animate-fade-up-delay {
+  animation: fadeInUp 0.5s ease 0.15s both;
+}
+
+.animate-fade-up-delay-2 {
+  animation: fadeInUp 0.5s ease 0.3s both;
+}
+
+/* Card hover lift with green ambient shadow */
+.card-hover {
+  transition: transform 0.28s cubic-bezier(0.34, 1.56, 0.64, 1),
+    box-shadow 0.28s ease,
+    border-color 0.2s ease;
+  border: 1px solid transparent;
+}
+
+.card-hover:hover {
+  transform: translateY(-6px) scale(1.005);
+  box-shadow: 0 20px 48px rgba(45, 106, 79, 0.14),
+    0 4px 12px rgba(45, 106, 79, 0.08);
+  border-color: rgba(45, 106, 79, 0.18);
+}
+
+/* Gradient border — wrap content inside a white bg div */
+.gradient-border {
+  position: relative;
+  background: white;
+  border-radius: 16px;
+}
+
+.gradient-border::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: 17px;
+  background: linear-gradient(135deg, #74C69D, #2D6A4F, #52b788);
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.gradient-border:hover::before {
+  opacity: 1;
+}
+
+/* Glowing border pulse (eco score badge, featured cards) */
+.glow-pulse {
+  animation: borderGlow 2.5s ease-in-out infinite;
+}
+
+/* Button press feel */
+.btn-press {
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+
+.btn-press:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(45, 106, 79, 0.25);
+}
+
+.btn-press:active {
+  transform: translateY(1px);
+  box-shadow: none;
+}
+
+/* Smooth all transitions */
+.smooth {
+  transition: all 0.2s ease;
+}
+
+/* Eco score badge colors */
+.eco-platinum {
+  background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+  border-color: #66bb6a;
+}
+
+.eco-gold {
+  background: linear-gradient(135deg, #fffde7, #fff9c4);
+  border-color: #ffca28;
+}
+
+.eco-silver {
+  background: linear-gradient(135deg, #f5f5f5, #eeeeee);
+  border-color: #bdbdbd;
+}
+
+.eco-bronze {
+  background: linear-gradient(135deg, #fbe9e7, #ffccbc);
+  border-color: #ff8a65;
+}
+
+.eco-basic {
+  background: linear-gradient(135deg, #fafafa, #f5f5f5);
+  border-color: #e0e0e0;
+}
+
+/* Slider */
+input[type="range"] {
+  accent-color: #2D6A4F;
+}
+
+/* Leaflet map fix */
+.leaflet-container {
+  height: 100%;
+  width: 100%;
+  border-radius: 16px;
+  z-index: 0;
+}
