@@ -10,15 +10,15 @@ export default defineConfig({
   server: {
     port: 3000,
     proxy: {
-      '/properties': 'http://localhost:8000',
-      '/booking-request': 'http://localhost:8000',
-      '/user-bookings': 'http://localhost:8000',
-      '/save-property': 'http://localhost:8000',
-      '/remove-property': 'http://localhost:8000',
-      '/saved-properties': 'http://localhost:8000',
-      '/owner-properties': 'http://localhost:8000',
-      '/owner-bookings': 'http://localhost:8000',
-      '/admin': 'http://localhost:8000',
+      '/properties': 'http://localhost:4000',
+      '/booking-request': 'http://localhost:4000',
+      '/user-bookings': 'http://localhost:4000',
+      '/save-property': 'http://localhost:4000',
+      '/remove-property': 'http://localhost:4000',
+      '/saved-properties': 'http://localhost:4000',
+      '/owner-properties': 'http://localhost:4000',
+      '/owner-bookings': 'http://localhost:4000',
+      '/admin': 'http://localhost:4000',
     }
   }
 })

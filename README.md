@@ -126,9 +126,9 @@ cd Ecostay
 ```bash
 cd backend
 npm install
-node server.js
+$env:PORT=4000; node server.js
 ```
-The API starts at **http://localhost:5000** and auto-seeds 12 eco properties on first run.
+The API starts at **http://localhost:4000** and auto-seeds 12 eco properties on first run.
 
 ### 3. Start the Frontend
 ```bash
